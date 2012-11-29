@@ -1,0 +1,10 @@
+# Eclipse files
+.project
+
+# TeX files
+*.aux
+*.log
+
+.texlipse
+bigsims.pdf
+bigsims.synctex.gz

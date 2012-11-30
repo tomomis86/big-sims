@@ -67,16 +67,54 @@ time steps on the PM side, and subcycles. Explain the parameters we tune.
 
 \section{Convergence and Timing Tests}
 
+Describe the suites of simulations we run for convergence tests. 
 
+(a) 256 Mpc boxes. How many do we need?  Which
+approximation parameters should we choose to vary? What are our references --
+full N-body with same particle loading, full N-body with higher particle
+loading? Emulator?
 
-\subsection{256 Mpc/h Boxes}
+(b) do we need any other box sizes? What do we hope to learn from these?
 
+\subsection{Dark Matter}
 
-\subsection{??? Bigger Boxes}
+What tests do we need here? A minimum list I can think of 
+\begin{itemize}
+  \item Convergence of the power spectrum as a function of approximation and
+  redshift.
+  \item Cross-correlation between full and approximate N-body.
+\end{itemize}
 
-\section{Simulation Parameters}
+\subsection{Halos}
 
-\subsection{Geometry}
+\begin{itemize}
+  \item Mass function comparisons
+  \item Halo position, mass and velocity comparisons.
+  \item Halo power spectra and bias. 
+  \item Cross correlations with full N-body, higher particle loading etc
+\end{itemize}
+
+\section{The BOSS Simulations}
+
+\subsection{Simulation Parameters}
+
+describe box size, masses, geometry etc. Show that we can fit in two BOSS
+volumes per box. 
+
+\subsection{Building the Galaxy Catalogs}
+
+How to do the redshift evolution -- interpolating between different redshift
+snapshots
+
+HODs at least for the basic BOSS sims. 
+
+\subsection{An Application}
+
+Maybe something simple here.
+
+\section{Discussion}
+
+Some words on conclusions go here. 
 
 
 \end{document}

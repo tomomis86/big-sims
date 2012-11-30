@@ -23,21 +23,51 @@ $^{1}$ Universe \\
 \maketitle
 
 \begin{abstract}
+We introduce and test an approximate scheme for generating mock catalogs for
+large-scale structure measurements in galaxy surveys, specializing in this work
+to the Baryon Oscillation Spectroscopic Survey.
+A brief description of the approximation scheme goes here??? A brief description
+of the tests and the accuracy we reach goes here??? Some comments about the
+timings of the tests goes here??? Final comments about the BOSS samples go
+here????
 \end{abstract}
 
 \section{Introduction}
 
+Why do we need large numbers of large N-body simulations? Discuss both
+covariance matrix estimation as well as systematic error estimation. Emphasize
+importance to capture as much of the physics as is possible.
 
+What about just running large numbers of N-body simulations : surveys are
+getting larger, and the numbers of simulations required is also large
+for covariance matrices. Ideally also require variations in cosmological
+parameters. Mention the LasDamas suite of simulations here as exemplars of this
+approach. 
 
-\section{Simulation Codes}
+Other approaches discussed here : Gaussian and log-normal random simulations;
+issues with these. 
 
-\subsection{The HACC code}
+2LPT, PTHalos, Pinocchio : discuss recent work by Manera et al. Also reference
+work in progress by Tassev et al.
 
+Our approach -- tune down N-body simulations.
 
-\subsection{An Approximation Scheme}
+A brief discussion of BOSS here and the need for large N-body simulations there. 
+
+An outline of the paper needs to go here\ldots
+
+\section{Generating Approximate Simulations}
+
+A brief discussion of the HACC code goes here, pointing out all the great things
+it can do. 
+
+Focus in on the key aspects of the code that we use for the approximate scheme :
+time steps on the PM side, and subcycles. Explain the parameters we tune.
 
 
 \section{Convergence and Timing Tests}
+
+
 
 \subsection{256 Mpc/h Boxes}
 

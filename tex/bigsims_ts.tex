@@ -1,0 +1,256 @@
+%% LyX 2.0.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[usenatbib]{mn2e}
+\usepackage[latin9]{inputenc}
+\usepackage[a4paper]{geometry}
+\geometry{verbose}
+\setcounter{tocdepth}{3}
+\usepackage{color}
+\usepackage{graphicx}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% A simple dot to overcome graphicx limitations
+\newcommand{\lyxdot}{.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% A simple dot to overcome graphicx limitations
+%Make my life significantly easier
+
+\global\long\def\bd{{\bm{\delta}}}
+
+\makeatother
+
+\begin{document}
+We are interested in recovering the halos and their masses, positions
+and velocities with the smallest time step necessary to preserve sufficient
+properties as mock catalogs.
+
+
+\section{Matching Halos}
+
+First, we compare a halo by halo in different simulations. Since all
+the simulations use exactly the same initial conditions, if those
+approximated N-body simulations can recover the halos reasonably well
+(compared to a full N-body simulation), then we should find the same
+halo with the same mass at the same position in different samples.
+The question we want to answer here are how mass resolutions and time
+steps affect on halo properties (i.e., mass, position and velocity)
+and how many halos don't match.
+
+To spatially match the halos obtained in different mass resolution
+and time step parameters, we first find a pair of halos from two different
+simulations, whose distance is the closest. Then, we set two conditions
+on those pairs to declare that those paired halos are the same halos:
+
+1) distance is smaller than $0.5h^{-1}{\rm Mpc}$,
+
+2) mass ratio is smaller than $10^{0.5}{\rm M_{\odot}}$.
+
+Under the above conditions, \textcolor{red}{XX}\% of halos in 450/5
+found paired halos in other samples (shown in \textcolor{red}{Table
+Y}: fraction of matched halos as a function of distance and mass ratios+lower
+halo mass limit). We also checked how those conditions affect to fraction
+of matched halos by changing the numerical values for distance and
+mass ratio criteria. As shown in \textcolor{red}{Table Y}, changing
+a criterion on mass ratio did not change the fraction compared to
+the distance criterion. This indicates that deviation of halo masses
+on pairs is relatively small.
+
+
+\subsection{Mass Resolution}
+
+{*} We take a simulation of $512^{3}$ particles as a reference.
+
+
+\subsection{Time steps}
+
+{*} We vary time step parameters with a fixed mass resolution, $256^{3}$particles
+in $(256h{\rm ^{-1}Mpc})^{3}$-volume box.
+
+{*} We take 450/5 as a reference and compare other time steps (300
+and 150 global time steps and 3 and 2 sub-cycles).
+\begin{itemize}
+\item Table: unmatched halos with different conditions
+\item Histogram: position (center, mean, mix?) \& table for mean and standard
+deviation 
+\begin{figure}
+\includegraphics[width=0.5\columnwidth]{/Users/ts485/Dropbox/Tomomi/HACC/Conv/Plots4lyx/distance1_mcut12\lyxdot 5to13\lyxdot 0_z0\lyxdot 15}
+
+\caption{Histograms of distance difference for matched halos with respect to
+halos from $256^{3}$ particles with 450 large steps and 5 inner steps.
+Different colors correspond to different simulation stepsizes: 300
+large steps with 3 inner steps (blue) and 2 inner steps (green), and
+150 large steps with 3 inner steps (red) and 2 inner steps (cyan).
+All the simulations use $256^{3}$ particles at redshift $z=0.15$.}
+\end{figure}
+(mean)
+\item Histogram: Mass 
+\begin{figure}
+\includegraphics[width=0.5\columnwidth]{/Users/ts485/Dropbox/Tomomi/HACC/Conv/Plots4lyx/histogram3_diff_z0\lyxdot 15}
+
+\caption{Histograms of log-based mass difference of different simulation stepsizes
+with respect to the one with 450 large steps and 5 inner steps. Histograms
+are not normalized and all halos are from the simulations with $256^{3}$
+particles. For each of simulations: 300 large steps with 3 inner steps
+(blue) and 2 inner steps (green), and 150 large steps with 3 inner
+steps (red).}
+\end{figure}
+ 
+\begin{figure}
+\includegraphics[width=0.5\columnwidth]{/Users/ts485/Dropbox/Tomomi/HACC/Conv/Plots4lyx/scatter2_256_300_2_z0\lyxdot 15}
+
+\caption{Comparison of halo masses for the samples (which is $256^{3}$particles
+simulation with 300 large steps and 2 inner steps) which are selected
+so that they match with the halos in the smulation of 450 large steps
+and 5 inner steps. The x-axis is log-based halo masses for the 450-step
+simulation and the y-axis is for the 300-step simulation. Both samples
+are at $z=0.15$.}
+\end{figure}
+
+\item Histogram: Velocity 
+\begin{figure}
+\includegraphics[width=0.5\columnwidth]{/Users/ts485/Dropbox/Tomomi/HACC/Conv/Plots4lyx/velMag1_z0\lyxdot 15}
+
+\caption{Histograms of velocity magnitude difference for matched halos with
+respect to halos from $256^{3}$ particles with 450 large steps and
+5 inner steps. Different colors correspond to different simulation
+stepsizes: 300 large steps with 3 inner steps (blue) and 2 inner steps
+(green), and 150 large steps with 3 inner steps (red) and 2 inner
+steps (cyan). All the simulations use $256^{3}$ particles at redshift
+$z=0.15$. Note that angle difference of velocity vectors for 98\%
+of matched halos are within 0.3 radians.}
+\end{figure}
+
+\item $n(M)$ for matched/unmatched halos (should I also put total?) 
+\begin{figure}
+\includegraphics[width=0.5\columnwidth]{/Users/ts485/Dropbox/Tomomi/HACC/Conv/Plots4lyx/New_unmatchedHalo_256_300_2_z0\lyxdot 15}\includegraphics[width=0.5\columnwidth]{/Users/ts485/Dropbox/Tomomi/HACC/Conv/Plots4lyx/New_unmatchedHaloRatio_256_300_2_z0\lyxdot 15}
+
+\caption{Left: Unmatched halo number density for the simulation of 300 large
+steps and 2 inner steps matching with 450 large steps and 5 inner
+steps. Both are from $256^{3}$ particle simulations. Right: Ratio
+of unmatched halo number densities (which are the same as the ones
+in the left plot) with respect to the corresponding total number densities.
+Both plots are at redshift $z=0.15$.}
+\end{figure}
+
+\item snapshots for unmatched halos whose mass is greater than $10^{14}{\rm M_{\odot}}$
+\end{itemize}
+
+\section{Observable/Statistics}
+\begin{itemize}
+\item Mass function comparisons: 
+\begin{figure}
+\includegraphics[width=0.5\columnwidth]{/Users/ts485/Dropbox/Tomomi/HACC/Conv/Plots4lyx/haloNum2}
+
+\caption{Comparison of mass functions (should I call this number density?)
+for different simulations at redshift $z=0.15$ and $z=0.8$. The
+shaded regions indicate the upper limit and the lower limit of mass
+functions for the simulation with $512^{3}$ particles and 450 steps
+with 5 inner(?) steps. The mean and standard deviations are calculated
+from bootstrap method. We compare them with the simulations of $256^{3}$
+particles with 450 large steps and 5 inner steps (described as $256^{3}(450:5)$
+with circles in the figure) and with 300 large steps and 2 inner steps
+(described as $256^{3}(300:2)$ with red stars in the figure).}
+\end{figure}
+ 
+\begin{figure}
+\includegraphics[width=0.5\columnwidth]{/Users/ts485/Dropbox/Tomomi/HACC/Conv/Plots4lyx/haloRatioNum256_z0\lyxdot 15}\caption{Ratios of mass functions of different time steps with $256^{3}$ particles,
+compared to $512^{3}$ particles with 450 large steps and 5 inner
+steps, at redshift $z=0.15$. Different colors are corresponding to
+different time steps. The legend in the plot has the same format as
+the one in Figure 1. This plot shows that the simulations with 450
+and 300 large steps agree well with the simulation with $512^{3}$
+particles.}
+\end{figure}
+
+\item Halo power spectra and bias: 
+\begin{figure}
+\includegraphics[width=0.5\columnwidth]{/Users/ts485/Dropbox/Tomomi/HACC/Conv/Plots4lyx/autoPower_mcut12\lyxdot 5_z0\lyxdot 15}\includegraphics[width=0.5\columnwidth]{/Users/ts485/Dropbox/Tomomi/HACC/Conv/Plots4lyx/autoPower_ratio_mcut12\lyxdot 5_z0\lyxdot 15}
+
+\caption{Left: Halo auto-power spectra obtained from different particle numbers
+and simulation step sizes. For each of the simulations: $512^{3}$
+particles with 450 large steps and 5 inner steps (line), $256^{3}$
+particles with 450 large steps and 5 inner steps (circle), and $256^{3}$
+particles with 300 large steps and 2 inner steps (cross). Right: Ratios
+of halo auto-power spectra of $256^{3}$ particles and different simulation
+step sizes with respect to the power spectrum of $512^{3}$ particles
+with 450 large steps and 5 inner steps. Different colors corresponds
+to different stepsizes: 450 large steps and 5 inner steps (blue),
+300 large steps and 3 inner steps (green), 300 large steps and 2 inner
+steps (red), 150 large steps and 3 inner steps (cyan), and 150 large
+steps and 2 inner steps (purple). }
+\end{figure}
+ 
+\begin{figure}
+\includegraphics[width=0.5\columnwidth]{/Users/ts485/Dropbox/Tomomi/HACC/Conv/Plots4lyx/Bias_mass_ws_mcut12\lyxdot 5to13\lyxdot 0_z0\lyxdot 15}\includegraphics[width=0.5\columnwidth]{/Users/ts485/Dropbox/Tomomi/HACC/Conv/Plots4lyx/Bias_matched_ws_mcut12\lyxdot 5to13\lyxdot 0_z0\lyxdot 15}
+
+\caption{Halo Biases for different stepsizes with $256^{3}$ particles at redshift
+$z=0.15$. Left panel is halo biases for samples which are selected
+based on mass, and right panel is for samples which are corresponding
+to halos of 450 large steps and 5 inner steps. Different colors indicate
+different stepsizes and mass range for halo samples is from $10^{12.5}{\rm M_{\odot}}$
+to $10^{13.0}{\rm M_{\odot}}$.}
+\end{figure}
+
+\item Cross correlations with full N-body, higher particle loading etc 
+\begin{figure}
+\includegraphics[width=0.5\columnwidth]{/Users/ts485/Dropbox/Tomomi/HACC/Conv/Plots4lyx/crossMatter4_z0\lyxdot 15}\includegraphics[width=0.5\columnwidth]{/Users/ts485/Dropbox/Tomomi/HACC/Conv/Plots4lyx/crossMatter3_ratio_mcut12\lyxdot 5to13\lyxdot 0_z0\lyxdot 15}
+
+\caption{Left: Cross power spectra of halos with DM particles at redshift $z=0.15$.
+DM particles are taken from the simulation of $256^{3}$ particles
+with 450 large steps and 5 inner steps. Different colors indicate
+different halo mass slices: ${\rm log_{10}M\in[12.5,13.0]}$ (blue),
+${\rm log_{10}M\in[13.0,13.5]}$ (green), and ${\rm log_{10}M>13.5}$
+(red). Lines are the simulations with 450 large steps and 5 inner
+steps, and circles are the ones with 300 large steps and 2 inner steps.
+Right: Ratios of cross power spectra for different simulations with
+respect to the cross power spectra with 450 large steps and 5 inner
+steps. Both cross power spectra are with respect to DM particles,
+which is the same as the left plot.}
+\end{figure}
+
+\item Comparison of matched halo samples and mass-sliced samples: what the
+comparison indicates is that corresponding halos don't have the same
+masses. ->What kind of problems do we have by having this issue?->$b(M)$
+may be diffrent for different simulations. 
+\begin{figure}
+\includegraphics[width=0.5\columnwidth]{/Users/ts485/Dropbox/Tomomi/HACC/Conv/Plots4lyx/autoPower_ratio256_mcut12\lyxdot 5to13\lyxdot 0_z0\lyxdot 15}\includegraphics[width=0.5\columnwidth]{/Users/ts485/Dropbox/Tomomi/HACC/Conv/Plots4lyx/matchPower2_wo_mcut12\lyxdot 5to13\lyxdot 0_z0\lyxdot 15}
+
+\caption{Those are the ratios of auto-power spectra of different stepsizes
+in $256^{3}$ particle sinulations. Halos in the left plot are selected
+based on mass, while halos in the right plot are chosen so that they
+match with halos with 450 large steps and 5 inner steps. I need to
+evaluate the effect of shot noises for each plot to see why the deviations
+of 150-step simulations are larger for matched halos...}
+\end{figure}
+\begin{figure}
+\includegraphics[width=0.5\columnwidth]{/Users/ts485/Dropbox/Tomomi/HACC/Conv/Plots4lyx/crossCoeff2_mcut12\lyxdot 5to13\lyxdot 0_z0\lyxdot 15}\includegraphics[width=0.5\columnwidth]{/Users/ts485/Dropbox/Tomomi/HACC/Conv/Plots4lyx/matchedCross1_mcut12\lyxdot 5to13\lyxdot 0_z0\lyxdot 15}
+
+\caption{Those are the cross-correlation coefficients of different stepsizes
+in $256^{3}$ particle sinulations. Halos in the left plot are selected
+based on mass, while halos in the right plot are chosen so that they
+match with halos with 450 large steps and 5 inner steps. I feel that
+this plot somehow contradicts with Figure 11 (though this result makes
+sense).}
+\end{figure}
+
+\end{itemize}
+
+\section{Observable Box}
+
+What we want to check/know here are:
+
+1) What redshift can we use linear-shifting?,
+
+2) What redshift-step size is required to preserve dynamics in simulations?
+\end{document}
